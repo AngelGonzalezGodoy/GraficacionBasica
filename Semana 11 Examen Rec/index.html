@@ -192,10 +192,10 @@
         cuadroVertexPositionBuffer = gl.createBuffer();
         gl.bindBuffer(gl.ARRAY_BUFFER, cuadroVertexPositionBuffer);
         vertices = [
-             0.0, 6.0,  -6.0,
-             0.0, -6.0, 6.0,
-             0.0, -6.0,  -6.0,   
-             0.0, 6.0,  6.0,
+              6.0,  6.0, 0.0,
+             -6.0,  6.0, 0.0,            
+              6.0, -6.0, 0.0,   
+             -6.0, -6.0, 0.0,
         ];
         gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
         cuadroVertexPositionBuffer.itemSize = 3;
@@ -238,7 +238,7 @@
 
         mvPopMatrix();
         ////PENTAGONO
-        mat4.translate(mvMatrix, [-45.0, 25.0, -15.0]);
+        mat4.translate(mvMatrix, [-40.0, 25.0, -15.0]);
         mvPushMatrix();
         //mat4.rotate(mvMatrix, degToRad(rTri), [-1, 0, 4]);
         gl.bindBuffer(gl.ARRAY_BUFFER, cuadroVertexPositionBuffer);
